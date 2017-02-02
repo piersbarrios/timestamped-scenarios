@@ -20,7 +20,7 @@ module Timestamped
       ts = Time.now - TEST_RUN_START
       formatted_timestamp = "%i:%02i" % [ts.to_i/60,(ts%60).round]
       formatted_time_now = Time.now.strftime("%H:%M:%S")
-      "#{name} [#{formatted_timestamp}] - [#{formatted_time_now}]"
+      "#{name} [Time to run #{formatted_timestamp}] - [Run at #{formatted_time_now}]"
     end
   end
 end
