@@ -18,8 +18,10 @@ module Timestamped
 
     def append_timestamp_to( name )
       ts = Time.now - TEST_RUN_START
+      tn = Time.now
       formatted_timestamp = "%i:%02i" % [ts.to_i/60,(ts%60).round]
-      "#{name} [#{formatted_timestamp}]"
+      formatted_time_now = tn.strftime("%H:%M:%S")
+      "#{name} [#{formatted_timestamp}] [#{formatted_time_now}]"
     end
   end
 end
