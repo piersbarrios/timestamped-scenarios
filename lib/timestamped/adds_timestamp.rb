@@ -17,7 +17,7 @@ module Timestamped
 
 
     def append_timestamp_to( name )
-      formatted_date_now = Time.now.strftime("%y/%m/%d")
+      formatted_date_now = Time.now.strftime("%m/%d/%y")
       formatted_time_now = Time.now.strftime("%H:%M:%S (%Z)")
       "#{name}  [Run on #{formatted_date_now} at #{formatted_time_now}]"
     end
